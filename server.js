@@ -60,7 +60,7 @@ application.post('/login', (request, response) => {
         request.session.name = user.name;
         request.session.email = user.email;
         request.session.views = 1;
-
+        response.render('login-success');
 
     } else { 
         response.render('login', user);
